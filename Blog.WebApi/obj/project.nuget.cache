@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "AtHWMCeECl0=",
+  "success": true,
+  "projectFilePath": "/Users/yuricosta/RiderProjects/YuriCodesBlog/Blog.WebApi/Blog.WebApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/yuricosta/.nuget/packages/microsoft.aspnetcore.openapi/9.0.3/microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
+    "/Users/yuricosta/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
