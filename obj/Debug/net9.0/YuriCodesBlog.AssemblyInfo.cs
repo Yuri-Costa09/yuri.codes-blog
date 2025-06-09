@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YuriCodesBlog")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ed2a581fef067d112f2835fbb2b5fc986bff39e")]
 [assembly: System.Reflection.AssemblyProductAttribute("YuriCodesBlog")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YuriCodesBlog")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

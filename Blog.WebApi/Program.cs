@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<MyDbContext>(options => options.UseNpgsql(
-    builder.Configuration.GetConnectionString("DefaultConnection")
+    builder.Configuration.GetConnectionString("Host=localhost;Port=4999;Database=postgres;Username=postgres;Password=senha123")
 ));
 
 var app = builder.Build();

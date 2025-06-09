@@ -1,22 +1,35 @@
 using Blog.Application.Interfaces;
 using Blog.Domain.Entities;
+using Blog.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Blog.Infrastructure.Repositories;
 
 public class UserRepository : IUserRepository
 {
-    public Task<User?> GetUserByIdAsync(int id)
+    private readonly MyDbContext _context;
+    
+    public UserRepository(MyDbContext context)
     {
-        throw new NotImplementedException();
+        _context = context;
+    }
+    
+    public async Task<User?> GetUserByIdAsync(int id)
+    { 
+        var user = _context.Users.FindAsync(id);
+        return await user;
     }
 
-    public Task<User?> GetUserByEmailAsync(string email)
+    public async Task<User?> GetUserByEmailAsync(string email)
     {
-        throw new NotImplementedException();
+        var user = _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        return await user;
     }
 
-    public Task<User> CreateUserAsync(User user)
+    public async Task<User> CreateUserAsync(User user)
     {
-        throw new NotImplementedException();
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync();
+        return user;
     }
 }

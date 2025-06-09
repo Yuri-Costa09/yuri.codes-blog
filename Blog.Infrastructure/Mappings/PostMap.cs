@@ -26,10 +26,9 @@ public class PostMap : IEntityTypeConfiguration<Post>
         builder.Property(p => p.Content)
             .HasColumnName("Content")
             .IsRequired();
-        
+
         builder.Property(p => p.CreatedAt)
             .HasColumnName("CreatedAt")
-            .IsRequired()
-            .HasDefaultValueSql("GETDATE()");
+            .IsRequired();
     }
 }
