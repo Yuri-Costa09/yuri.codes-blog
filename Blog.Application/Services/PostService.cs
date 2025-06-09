@@ -24,7 +24,7 @@ public class PostService
         if(string.IsNullOrWhiteSpace(content)) throw new ArgumentException("Content cannot be empty.", nameof(content));
         if(title.Length > 200) throw new ArgumentException("Title cannot be longer than 200 characters.", nameof(title));
 
-        var post = new Post( title, content);
+        var post = new Post(title, content);
         await _repository.CreatePostAsync(post);
         
         return post;
